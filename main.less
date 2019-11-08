@@ -9,9 +9,9 @@
 body {
   font-size: 16px;
   font-family: "Lato", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   text-rendering: optimizeLegibility;
-  //color: #333;
+  -webkit-font-smoothing: antialiased;
 }
 
 p {
@@ -96,8 +96,9 @@ h4 {
   .text-wrapper {
     width: 370px;
     position: absolute;
-    top: 50px;
+    top: 50%;
     left: 160px;
+    transform: translateY(-50%);
   }
 
   .tag-line {
