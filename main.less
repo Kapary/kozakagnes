@@ -9,6 +9,9 @@
 body {
   font-size: 16px;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  //color: #333;
 }
 
 p {
@@ -44,13 +47,12 @@ h4 {
 // HERO
 #hero {
   height: 100vh;
-  //background: grey;
-  background-position: center 32%;
+  background-position: center top;
   background-size: cover;
 }
 
 .main-menu-wrapper {
-  padding: 50px;
+  padding: 40px 50px;
 }
 
 .main-menu {
@@ -67,7 +69,20 @@ h4 {
   max-width: 850px;
 
   li {
+    display: flex;
+    align-items: center;
     padding: 0;
+  }
+}
+
+.logo {
+  path {
+    transition: fill 0.25s ease-out;
+  }
+  &:hover {
+    path {
+      fill: @headingColor;
+    }
   }
 }
 
@@ -96,7 +111,7 @@ h4 {
     background-size: cover;
     margin: auto 0 auto auto;
     background-position: center bottom;
-    box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.17);
+    box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
   }
 }
 
