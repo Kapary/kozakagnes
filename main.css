@@ -7,7 +7,7 @@
 body {
   font-size: 16px;
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
@@ -39,7 +39,7 @@ h4 {
 }
 #hero {
   height: 100vh;
-  background-position: center top;
+  background-position: center 15%;
   background-size: cover;
 }
 .main-menu-wrapper {
