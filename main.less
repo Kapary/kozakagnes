@@ -14,6 +14,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
+
 p {
   line-height: 30px;
   letter-spacing: 0.05em;
@@ -175,6 +182,7 @@ h4 {
     transition: opacity 0.3s ease-out;
     position: relative;
 
+    video,
     img {
       display: block;
       max-width: 100%;
@@ -194,14 +202,15 @@ h4 {
 
       h3 {
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: 25px;
         left: 25px;
         max-width: 66%;
         font-size: 35px;
+        margin: 0;
         color: #fff;
         opacity: 0;
         transition: opacity 0.3s ease-out;
+        text-transform: none;
       }
 
       &:hover {
@@ -240,23 +249,28 @@ h4 {
   text-align: center;
   align-items: center;
   color: @headingColor;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: block;
 
-  .arrow-btn-text {
+  /*  .arrow-btn-text {
     margin: auto;
-  }
+  } */
 
-  &:hover {
-    .arrow-btn-text {
-      color: #333;
-    }
+  // &:hover {
+  //   /* .arrow-btn-text {
+  //     color: #333;
+  //   } */
 
-    .arrow-btn-img {
-      border-color: #333;
-      color: #333;
-    }
-  }
+  //   .arrow-btn-img {
+  //     border-color: #333;
+  //     color: #333;
+  //   }
+  // }
 
-  .arrow-btn-img {
+  /* .arrow-btn-img {
     transition: border-color 0.2s ease-out, color 0.2s ease-out;
     border: 1px solid @headingColor;
     border-radius: 50%;
@@ -268,5 +282,17 @@ h4 {
     font-weight: 400;
     margin-left: 10px;
     padding-left: 2px;
+  } */
+
+  .arrow-btn-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 5px;
+    padding-top: 2px;
+    color: #fff;
   }
 }

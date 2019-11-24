@@ -11,6 +11,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+}
 p {
   line-height: 30px;
   letter-spacing: 0.05em;
@@ -162,6 +168,7 @@ h4 {
   transition: opacity 0.3s ease-out;
   position: relative;
 }
+#stories .stories-list-item video,
 #stories .stories-list-item img {
   display: block;
   max-width: 100%;
@@ -178,16 +185,16 @@ h4 {
 }
 #stories .stories-list-item a h3 {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  bottom: 25px;
   left: 25px;
   max-width: 66%;
   font-size: 35px;
+  margin: 0;
   color: #fff;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out;
+  text-transform: none;
 }
 #stories .stories-list-item a:hover h3 {
   opacity: 1;
@@ -217,28 +224,36 @@ h4 {
       -ms-flex-align: center;
           align-items: center;
   color: #da9c3a;
-}
-.arrow-btn .arrow-btn-text {
-  margin: auto;
-}
-.arrow-btn:hover .arrow-btn-text {
-  color: #333;
-}
-.arrow-btn:hover .arrow-btn-img {
-  border-color: #333;
-  color: #333;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: block;
+  /*  .arrow-btn-text {
+    margin: auto;
+  } */
+  /* .arrow-btn-img {
+    transition: border-color 0.2s ease-out, color 0.2s ease-out;
+    border: 1px solid @headingColor;
+    border-radius: 50%;
+    display: block;
+    width: 24px;
+    height: 24px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 10px;
+    padding-left: 2px;
+  } */
 }
 .arrow-btn .arrow-btn-img {
-  -webkit-transition: border-color 0.2s ease-out, color 0.2s ease-out;
-  transition: border-color 0.2s ease-out, color 0.2s ease-out;
-  border: 1px solid #da9c3a;
-  border-radius: 50%;
   display: block;
   width: 24px;
   height: 24px;
   line-height: 22px;
   font-size: 16px;
-  font-weight: 400;
-  margin-left: 10px;
-  padding-left: 2px;
+  font-weight: 700;
+  padding-left: 5px;
+  padding-top: 2px;
+  color: #fff;
 }
