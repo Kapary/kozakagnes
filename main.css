@@ -78,6 +78,10 @@ h4 {
 .logo:hover path {
   fill: #da9c3a;
 }
+.tag-line {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
 #we-care {
   height: 100vh;
   padding: 50px 0;
@@ -94,10 +98,6 @@ h4 {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-#we-care .tag-line {
-  font-size: 70px;
-  margin-bottom: 20px;
-}
 #we-care .img-wrapper {
   height: 100%;
   width: 75%;
@@ -106,6 +106,60 @@ h4 {
   background-position: center bottom;
   -webkit-box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
           box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
+}
+#offer {
+  height: 100vh;
+  padding: 50px 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#offer .text-wrapper {
+  width: 370px;
+  position: absolute;
+  top: 50%;
+  right: 160px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+#offer .img-wrapper {
+  height: 100%;
+  width: 75%;
+  background-size: cover;
+  margin: auto auto auto 0;
+  background-position: center bottom;
+  -webkit-box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
+}
+.section-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#stories {
+  padding: 50px 0;
+}
+#stories .stories-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  list-style: none;
+  pointer-events: none;
+}
+#stories .stories-list:hover .stories-list-item {
+  opacity: 0.3;
+}
+#stories .stories-list-item {
+  pointer-events: auto;
+  -webkit-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+#stories .stories-list-item img {
+  max-width: 100%;
+}
+#stories .stories-list-item:hover {
+  opacity: 1 !important;
 }
 .arrow-btn {
   margin-top: 10px;

@@ -86,6 +86,11 @@ h4 {
   }
 }
 
+.tag-line {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+
 // WE CARE
 #we-care {
   height: 100vh;
@@ -101,11 +106,6 @@ h4 {
     transform: translateY(-50%);
   }
 
-  .tag-line {
-    font-size: 70px;
-    margin-bottom: 20px;
-  }
-
   .img-wrapper {
     height: 100%;
     width: 75%;
@@ -113,6 +113,67 @@ h4 {
     margin: auto 0 auto auto;
     background-position: center bottom;
     box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
+  }
+}
+
+#offer {
+  height: 100vh;
+  padding: 50px 0;
+  position: relative;
+  display: flex;
+
+  .text-wrapper {
+    width: 370px;
+    position: absolute;
+    top: 50%;
+    right: 160px;
+    transform: translateY(-50%);
+  }
+
+  .img-wrapper {
+    height: 100%;
+    width: 75%;
+    background-size: cover;
+    margin: auto auto auto 0;
+    background-position: center bottom;
+    box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
+  }
+}
+
+.section-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#stories {
+  padding: 50px 0;
+
+  .stories-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+    list-style: none;
+    pointer-events: none;
+
+    &:hover {
+      .stories-list-item {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .stories-list-item {
+    pointer-events: auto;
+    transition: opacity 0.3s ease-out;
+
+    img {
+      max-width: 100%;
+    }
+
+    &:hover {
+      opacity: 1 !important;
+    }
   }
 }
 
