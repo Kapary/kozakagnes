@@ -10,6 +10,7 @@ body {
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  color: #333;
 }
 h1,
 h2,
@@ -26,10 +27,6 @@ a {
   text-decoration: none;
   -webkit-transition: color 0.2s ease-out;
   transition: color 0.2s ease-out;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 700;
 }
 a:hover {
   color: #da9c3a;
@@ -77,6 +74,10 @@ h4 {
           align-items: center;
   padding: 0;
 }
+.main-menu a {
+  text-transform: uppercase;
+  font-size: 12px;
+}
 .logo path {
   -webkit-transition: fill 0.25s ease-out;
   transition: fill 0.25s ease-out;
@@ -119,6 +120,11 @@ h4 {
   display: -ms-flexbox;
   display: flex;
 }
+#offer .section-wrapper {
+  width: 1100px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
 #offer .text-wrapper {
   width: 410px;
   position: absolute;
@@ -130,11 +136,12 @@ h4 {
 #offer .img-wrapper {
   height: 100%;
   width: 75%;
-  background-size: cover;
+  background-size: auto 100%;
   margin: auto auto auto 0;
-  background-position: center bottom;
+  background-position: center top;
   -webkit-box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
           box-shadow: inset 300px 0 300px rgba(255, 255, 255, 0.3);
+  background-repeat: no-repeat;
 }
 .section-wrapper {
   max-width: 860px;
@@ -261,6 +268,35 @@ h4 {
 }
 #post .images-list li + li {
   margin-top: 15px;
+}
+#main-footer {
+  background: #fafafa;
+  padding: 50px 0;
+  margin-top: 100px;
+  text-align: center;
+}
+#main-footer .section-wrapper {
+  display: grid;
+  width: 960px;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+}
+#main-footer h3 {
+  font-size: 24px;
+  letter-spacing: initial;
+}
+#main-footer .footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+#main-footer .footer-menu li + li {
+  margin-top: 10px;
 }
 .arrow-btn {
   margin-top: 10px;
