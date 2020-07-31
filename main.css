@@ -5,11 +5,17 @@
   right: 30px;
   top: 30px;
   -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
   z-index: 1001;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  #mobile-menu-trigger {
+    display: block;
+  }
 }
 #mobile-menu-trigger span {
   display: block;
@@ -70,6 +76,9 @@ h2,
 h3,
 h4 {
   font-weight: 700;
+}
+h3 {
+  font-size: 24px;
 }
 p {
   line-height: 30px;
@@ -242,7 +251,7 @@ h4 {
     padding: 30px;
   }
 }
-#offer {
+#about {
   height: 100vh;
   padding: 50px 0;
   position: relative;
@@ -250,12 +259,12 @@ h4 {
   display: -ms-flexbox;
   display: flex;
 }
-#offer .section-wrapper {
+#about .section-wrapper {
   width: 1100px;
   max-width: 1100px;
   margin: 0 auto;
 }
-#offer .text-wrapper {
+#about .text-wrapper {
   width: 410px;
   position: absolute;
   top: 50%;
@@ -263,7 +272,7 @@ h4 {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
-#offer .img-wrapper {
+#about .img-wrapper {
   height: 100%;
   width: 75%;
   background-size: auto 100%;
@@ -468,4 +477,33 @@ h4 {
   padding-left: 5px;
   padding-top: 2px;
   color: #fff;
+}
+.offer-section {
+  padding: 100px 0;
+  background: url("img/bg-camel.jpg") center;
+  background-size: 720px 435px;
+  color: #fff;
+}
+.offer-section h2,
+.offer-section h3 {
+  color: #fff;
+}
+.offer-section .tag-line {
+  margin-bottom: 50px;
+}
+.offer-section .grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2rem;
+}
+.offer-section .offer-list {
+  padding-left: 0;
+  list-style-position: inside;
+  margin-bottom: 0;
+}
+.offer-section .offer-list li + li {
+  margin-top: 0.5rem;
+}
+.main-section {
+  margin: 50px 0;
 }

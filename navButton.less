@@ -4,16 +4,15 @@
   position: fixed;
   right: 30px;
   top: 30px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition: 0.5s ease-in-out;
-  -moz-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
   cursor: pointer;
   z-index: 1001;
+  display: none;
+
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
 }
 
 #mobile-menu-trigger span {
