@@ -413,15 +413,14 @@ h4 {
   background: #fafafa;
   padding: 50px 0;
   margin-top: 100px;
-  text-align: center;
 }
 #main-footer .section-wrapper {
-  display: grid;
-  width: 960px;
+  width: 90%;
   max-width: 100%;
+  display: grid;
   grid-template-columns: 0.5fr 1fr 1fr 1fr;
-  -webkit-column-gap: 30px;
-          column-gap: 30px;
+  -webkit-column-gap: 4rem;
+          column-gap: 4rem;
 }
 #main-footer h3 {
   font-size: 24px;
@@ -440,19 +439,21 @@ h4 {
 }
 .arrow-btn {
   margin-top: 10px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #da9c3a;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   border: 2px solid #fff;
-  display: block;
   /*  .arrow-btn-text {
     margin: auto;
   } */
@@ -470,56 +471,105 @@ h4 {
     padding-left: 2px;
   } */
 }
-.arrow-btn .arrow-btn-img {
-  display: block;
+.arrow-btn:after {
+  content: "";
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: 24px;
   height: 24px;
-  line-height: 22px;
-  font-size: 16px;
-  font-weight: 700;
-  padding-left: 5px;
-  padding-top: 2px;
   color: #fff;
+  background: url(img/arrow-next-white.svg) no-repeat center;
+  background-size: 16px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .offer-section {
   color: #fff;
   display: grid;
-  grid-template-columns: 3fr 4fr;
+  grid-template-columns: 1fr 1fr;
   grid-column-gap: 100px;
+  background: url("img/bg-camel.jpg") center;
+  background-size: 720px 435px;
+  padding: 100px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.offer-section:before {
+  content: "";
+  width: 2px;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: calc(100% - 200px);
+  left: 50%;
+  top: 50%;
 }
 .offer-section h2,
 .offer-section h3 {
   color: #fff;
 }
+.offer-section h3 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
 .offer-section .tag-line {
   margin-bottom: 50px;
+  line-height: 1;
 }
-.offer-section .insta-feed-wrapper {
+.offer-section .image-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-left: 100px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.offer-section .image-wrapper .offer-image {
+  width: 250px;
+  height: 280px;
 }
 .offer-section .content-wrapper {
-  background: url("img/bg-camel.jpg") center;
-  background-size: 720px 435px;
-  padding: 100px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .offer-section .list-wrapper + .list-wrapper {
-  margin-left: 50px;
+  margin-top: 2rem;
 }
 .offer-section .grid-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .offer-section .offer-list {
   padding-left: 0;
   list-style-position: inside;
+  list-style: none;
   margin-bottom: 0;
+  margin-top: 0;
 }
 .offer-section .offer-list li + li {
   margin-top: 0.5rem;
