@@ -148,25 +148,23 @@ h4 {
   }
 }
 
+.mobile-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+
+  .is-homepage & {
+    padding-top: 1rem;
+  }
+}
+
 .tag-line {
   font-size: 70px;
   margin-bottom: 20px;
 }
 
-.image-with-text-section {
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
-    padding: 15px;
-
-    .text-wrapper {
-      position: static !important;
-      transform: initial !important;
-    }
-  }
-}
-
 // WE CARE
-#we-care {
+.we-care {
   height: 100vh;
   padding: 50px 0;
   position: relative;
@@ -194,7 +192,7 @@ h4 {
   }
 }
 
-#about {
+.about {
   height: 100vh;
   padding: 50px 0;
   position: relative;
@@ -202,7 +200,7 @@ h4 {
 
   .section-wrapper {
     width: 1100px;
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
   }
 
@@ -230,13 +228,21 @@ h4 {
   margin: 0 auto;
 }
 
-#stories {
+.stories {
   padding: 50px 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
 
   .tag-line {
     position: relative;
     z-index: 101;
     width: 200px;
+
+    @media screen and (max-width: 768px) {
+      width: initial;
+    }
   }
 
   .stories-list {
@@ -356,20 +362,46 @@ h4 {
         }
       }
     }
+
+    @media screen and (max-width: 768px) {
+      + .stories-list-item {
+        margin-top: 1rem;
+      }
+
+      a {
+        width: 100%;
+        margin: initial !important;
+        img {
+        }
+      }
+    }
   }
 }
 
-#post {
-  width: 900px;
+.post-wrapper {
+  width: 850px;
+  max-width: 90%;
   margin: 30px auto;
-  padding: 70px 0;
+  padding-top: 70px;
   border-top: 1px solid #ddd;
   text-align: center;
 
+  @media screen and (max-width: 768px) {
+    padding-top: 3rem;
+  }
+
   .images-list {
-    margin: 100px 0 0;
+    margin: 85px 0 0;
     padding: 0;
     list-style: none;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 3rem;
+    }
+
+    img {
+      max-width: 100%;
+    }
 
     li {
       + li {
@@ -382,7 +414,12 @@ h4 {
 .main-footer {
   background: #fafafa;
   padding: 50px 0;
-  margin-top: 100px;
+  margin-top: 60px;
+
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
   .section-wrapper {
     width: 90%;
@@ -390,17 +427,32 @@ h4 {
     display: grid;
     grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
     column-gap: 4rem;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .main-footer-column {
     &:first-of-type {
       text-align: center;
     }
+
+    @media screen and (max-width: 767px) {
+      + .main-footer-column {
+        margin-top: 3rem;
+      }
+    }
   }
 
   h3 {
     font-size: 24px;
     letter-spacing: initial;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 1rem;
+    }
   }
 
   .footer-menu {
@@ -498,6 +550,12 @@ h4 {
   margin-right: auto;
   position: relative;
 
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px 95px;
+  }
+
   &:before {
     content: "";
     width: 2px;
@@ -507,6 +565,10 @@ h4 {
     height: ~"calc(100% - 200px)";
     left: 50%;
     top: 50%;
+
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 
   h2,
@@ -521,6 +583,7 @@ h4 {
     margin-bottom: 1rem;
     font-size: 1rem;
     text-transform: uppercase;
+    line-height: 133%;
   }
 
   .tag-line {
@@ -536,6 +599,11 @@ h4 {
     .offer-image {
       width: 250px;
       height: 280px;
+
+      @media screen and (max-width: 767px) {
+        width: 150px;
+        height: 168px;
+      }
     }
   }
 
@@ -543,6 +611,10 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+      margin-top: 3rem;
+    }
   }
 
   .list-wrapper {
@@ -568,5 +640,34 @@ h4 {
     li + li {
       margin-top: 0.5rem;
     }
+  }
+}
+
+// global mobile styles
+@media screen and (max-width: 767px) {
+  .main-section {
+    margin-top: 4rem;
+  }
+
+  .image-with-text-section {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+
+    .text-wrapper {
+      position: static !important;
+      transform: initial !important;
+      width: 100%;
+    }
+
+    .img-wrapper {
+      padding-bottom: 50%;
+      width: 100%;
+      background-size: cover;
+    }
+  }
+
+  .tag-line {
+    font-size: 2rem;
   }
 }

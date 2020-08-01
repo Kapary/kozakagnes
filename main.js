@@ -39,10 +39,12 @@ window.onload = function () {
 
   mainMenus.forEach(function (mainMenu) {
     mainMenu.addEventListener("click", function (e) {
-      e.preventDefault();
-      document.querySelector(e.target.hash).scrollIntoView({
-        behavior: "smooth"
-      });
+      if (document.querySelector(".is-homepage")) {
+        e.preventDefault();
+        document.querySelector(e.target.hash).scrollIntoView({
+          behavior: "smooth"
+        });
+      }
     });
   });
 };
