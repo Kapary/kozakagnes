@@ -379,7 +379,7 @@ h4 {
   }
 }
 
-#main-footer {
+.main-footer {
   background: #fafafa;
   padding: 50px 0;
   margin-top: 100px;
@@ -388,8 +388,14 @@ h4 {
     width: 90%;
     max-width: 100%;
     display: grid;
-    grid-template-columns: 0.5fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
     column-gap: 4rem;
+  }
+
+  .main-footer-column {
+    &:first-of-type {
+      text-align: center;
+    }
   }
 
   h3 {
@@ -409,6 +415,19 @@ h4 {
       + li {
         margin-top: 10px;
       }
+    }
+  }
+
+  .snapwidget-widget {
+    max-width: 320px; // 100 * 3 - 2 * 10px padding
+  }
+
+  .insta-link {
+    display: block;
+    cursor: pointer;
+
+    iframe {
+      pointer-events: none;
     }
   }
 }

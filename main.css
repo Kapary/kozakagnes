@@ -409,24 +409,27 @@ h4 {
 #post .images-list li + li {
   margin-top: 15px;
 }
-#main-footer {
+.main-footer {
   background: #fafafa;
   padding: 50px 0;
   margin-top: 100px;
 }
-#main-footer .section-wrapper {
+.main-footer .section-wrapper {
   width: 90%;
   max-width: 100%;
   display: grid;
-  grid-template-columns: 0.5fr 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 0.5fr 1fr;
   -webkit-column-gap: 4rem;
           column-gap: 4rem;
 }
-#main-footer h3 {
+.main-footer .main-footer-column:first-of-type {
+  text-align: center;
+}
+.main-footer h3 {
   font-size: 24px;
   letter-spacing: initial;
 }
-#main-footer .footer-menu {
+.main-footer .footer-menu {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -434,8 +437,18 @@ h4 {
   text-transform: uppercase;
   font-size: 12px;
 }
-#main-footer .footer-menu li + li {
+.main-footer .footer-menu li + li {
   margin-top: 10px;
+}
+.main-footer .snapwidget-widget {
+  max-width: 320px;
+}
+.main-footer .insta-link {
+  display: block;
+  cursor: pointer;
+}
+.main-footer .insta-link iframe {
+  pointer-events: none;
 }
 .arrow-btn {
   margin-top: 10px;

@@ -31,10 +31,10 @@
     <div id="hero" style="background-image: url('./img/hero.jpg');">
       <nav class="main-menu-wrapper">
         <ul class="main-menu">
-          <li><a href="/">O mnie</a></li>
-          <li><a href="/">Oferta</a></li>
+          <li><a href="#we-care">O mnie</a></li>
+          <li><a href="#offer">Oferta</a></li>
           <li>
-            <a href="/" title="Home" class="logo"
+            <a href="" title="Home" class="logo"
               ><svg
                 id="Warstwa_1"
                 data-name="Warstwa 1"
@@ -57,8 +57,8 @@
               </svg>
             </a>
           </li>
-          <li><a href="/">Portfolio</a></li>
-          <li><a href="/">Kontakt</a></li>
+          <li><a href="#stories">Portfolio</a></li>
+          <li><a href="#main-footer">Kontakt</a></li>
         </ul>
       </nav>
       <div id="mobile-menu-trigger">
@@ -148,7 +148,7 @@
       </div>
     </div>
 
-    <div id="#offer" class="offer-section main-section">
+    <div id="offer" class="offer-section main-section">
       <div class="image-wrapper">
         <img class="offer-image" src="img/hands-1.svg" />
       </div>
@@ -192,7 +192,7 @@
                 Ewelina &amp;&nbsp;Konrad
                 <span class="btn arrow-btn"> </span>
               </h3>
-              <img src="img/stories-1.jpg" />
+              <img loading="lazy" src="img/stories-1.jpg" />
             </a>
           </li>
           <li class="stories-list-item">
@@ -200,7 +200,7 @@
               <h3>
                 Sandra &amp;&nbsp;Grzegorz<span class="btn arrow-btn"> </span>
               </h3>
-              <img src="img/stories-2.jpg" />
+              <img loading="lazy" src="img/stories-2.jpg" />
             </a>
           </li>
           <li class="stories-list-item">
@@ -208,7 +208,7 @@
               <h3>
                 Karolina &amp;&nbsp;Kuba<span class="btn arrow-btn"> </span>
               </h3>
-              <img src="img/stories-3.jpg" />
+              <img loading="lazy" src="img/stories-3.jpg" />
             </a>
           </li>
           <li class="stories-list-item">
@@ -225,12 +225,12 @@
       </div>
     </section>
 
-    <footer id="main-footer">
+    <footer id="main-footer" class="main-footer">
       <div class="section-wrapper">
-        <div>
+        <div class="main-footer-column">
           <img src="img/logo-hands.svg" width="150" />
         </div>
-        <div>
+        <div class="main-footer-column">
           <h3>O mnie</h3>
           <p>
             Cześć, mam na imię Agnieszka! Zajmuję się fotografią ślubną oraz
@@ -247,26 +247,33 @@
             <li><a href="">Kontakt</a></li>
           </ul>
         </div> -->
-        <div>
+        <div class="main-footer-column">
           <h3>Napisz do mnie</h3>
           <a href="mailto:hello@kozakagnes.com">hello@kozakagnes.com</a>
         </div>
-        <div>
+        <div class="main-footer-column">
           <h3>Instagram</h3>
-          <!-- SnapWidget -->
-          <script src="https://snapwidget.com/js/snapwidget.js"></script>
-          <iframe
-            src="https://snapwidget.com/embed/857116"
-            class="snapwidget-widget"
-            allowtransparency="true"
-            frameborder="0"
-            scrolling="no"
-            style="border: none; overflow: hidden; width: 100%;"
-          ></iframe>
+
+          <a
+            class="insta-link"
+            href="https://www.instagram.com/fot.kozakagnes/"
+            target="_blank"
+          >
+            <!-- SnapWidget -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe
+              src="https://snapwidget.com/embed/798925"
+              class="snapwidget-widget"
+              allowtransparency="true"
+              frameborder="0"
+              scrolling="no"
+              style="border: none; overflow: hidden; width: 100%;"
+            ></iframe>
+          </a>
         </div>
       </div>
     </footer>
-    <script src="https://snapwidget.com/js/snapwidget.js"></script>
+
     <script src="./main.js"></script>
   </body>
 </html>
