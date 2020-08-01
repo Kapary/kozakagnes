@@ -427,6 +427,9 @@ h4 {
 @media screen and (max-width: 768px) {
   .post-wrapper {
     padding-top: 3rem;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 .post-wrapper .images-list {
