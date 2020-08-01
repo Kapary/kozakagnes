@@ -219,6 +219,11 @@ h4 {
 .is-homepage .mobile-logo-wrapper {
   padding-top: 1rem;
 }
+@media screen and (min-width: 769px) {
+  .mobile-logo-wrapper {
+    display: none;
+  }
+}
 .tag-line {
   font-size: 70px;
   margin-bottom: 20px;
