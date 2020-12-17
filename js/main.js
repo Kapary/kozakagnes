@@ -4,14 +4,17 @@ window.onload = function () {
     item.addEventListener("mouseover", function () {
       offerLinks.forEach(function (item) {
         item.classList.add("faded");
+        item.classList.remove("active");
       });
 
       this.classList.remove("faded");
+      this.classList.add("active");
     });
 
     item.addEventListener("mouseout", function () {
       offerLinks.forEach(function (item) {
         item.classList.remove("faded");
+        item.classList.remove("active");
       });
     });
   });
@@ -48,8 +51,19 @@ window.onload = function () {
     });
   });
 
+  var totalNumberWrapper = document.getElementById("slider-total-number");
+  var currentIndexWrapper = document.getElementById("slider-current-index");
+
+  totalNumberWrapper.innerHTML = document.querySelectorAll(
+    ".slide-container"
+  ).length;
+
   // Slider with references
-  new Glide(".glide", {
+  var glide = new Glide(".glide", {
     animationDuration: 1000
   }).mount();
+
+  glide.on("run.after", function () {
+    currentIndexWrapper.innerHTML = glide.index + 1;
+  });
 };

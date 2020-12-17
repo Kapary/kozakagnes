@@ -1,5 +1,5 @@
 .references {
-  width: 80%;
+  width: 66%;
   margin: 0 auto;
   //   .references-slider {
   //   }
@@ -19,7 +19,7 @@
 
     .slide-names {
       margin-top: 4rem;
-      font-size: 3rem;
+      font-size: 4rem;
     }
   }
 
@@ -28,6 +28,9 @@
     right: 0;
     bottom: 0;
     z-index: 1;
+    display: flex;
+    align-items: center;
+    color: @brandColor;
   }
 
   .references-slider-arrow {
@@ -36,8 +39,26 @@
     background: none;
     outline: none;
 
-    + .references-slider-arrow {
-      margin-left: 2rem;
+    .btn {
+      margin-top: auto;
+    }
+
+    // + .references-slider-arrow {
+    //   margin-left: 1rem;
+    // }
+  }
+
+  .separator {
+    height: 1px;
+    width: 100px;
+    background: @brandColor;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .slider-position {
+    &:after {
+      content: "";
     }
   }
 }
