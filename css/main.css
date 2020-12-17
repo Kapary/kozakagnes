@@ -88,6 +88,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #333;
   background: url("../img/background.png");
+  overflow-x: hidden;
 }
 h1,
 h2,
@@ -105,7 +106,7 @@ p {
 a {
   color: #333;
   text-decoration: none;
-  transition: color 0.2s ease-out;
+  transition: color 0.2s ease-in;
 }
 h1,
 h2,
@@ -140,7 +141,7 @@ h4 {
 .mobile-menu-wrapper {
   padding: 10px 15px 30px;
   background: #fafafa;
-  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-in;
   transform: translateX(100%);
   position: fixed;
   width: 100%;
@@ -196,7 +197,7 @@ h4 {
   }
 }
 .logo path {
-  transition: fill 0.25s ease-out;
+  transition: fill 0.25s ease-in;
 }
 .mobile-logo-wrapper {
   display: flex;
@@ -283,10 +284,11 @@ h4 {
   background: url(../img/line.svg) no-repeat center;
   display: block;
   width: 100%;
-  height: 290px;
+  height: 250px;
   position: absolute;
   pointer-events: none;
   bottom: -100px;
+  background-size: cover;
 }
 @media screen and (max-width: 768px) {
   .stories {
@@ -324,7 +326,7 @@ h4 {
   display: flex;
 }
 .stories .stories-list-item .stories-list-item-link {
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-in;
 }
 .stories .stories-list-item .stories-list-item-link.active {
   z-index: 110;
@@ -387,7 +389,7 @@ h4 {
   margin: 0;
   color: #fff;
   opacity: 0;
-  transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-in;
   text-transform: none;
   white-space: nowrap;
 }
@@ -438,7 +440,7 @@ h4 {
 .main-footer {
   background: #c18d6f;
   color: #fff;
-  padding: 6rem 0;
+  padding: 6rem 0 3rem;
   margin-top: 6rem;
 }
 .main-footer p {
@@ -500,7 +502,7 @@ h4 {
   pointer-events: none;
 }
 .main-footer .copy {
-  padding-top: 25px;
+  padding-top: 3rem;
   text-align: center;
 }
 .arrow-btn {
@@ -516,7 +518,7 @@ h4 {
     margin: auto;
   } */
   /* .arrow-btn-img {
-    transition: border-color 0.2s ease-out, color 0.2s ease-out;
+    transition: border-color 0.2s ease-in, color 0.2s ease-in;
     border-radius: 50%;
     display: block;
     width: 24px;
@@ -663,18 +665,31 @@ h4 {
     background-size: cover;
   }
   .tag-line {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
   }
 }
 .references {
   width: 66%;
   margin: 0 auto;
 }
+@media screen and (max-width: 769px) {
+  .references {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 .references .tag-line {
   text-align: right;
   margin-bottom: -50px;
   z-index: 1;
   position: relative;
+}
+@media screen and (max-width: 769px) {
+  .references .tag-line {
+    margin-bottom: 1.5rem;
+  }
 }
 .references .references-slider ul {
   margin: 0;
@@ -683,16 +698,38 @@ h4 {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 769px) {
+  .references .slide-container {
+    flex-direction: column;
+  }
+}
 .references .slide-container .slide-image {
   width: 400px;
   height: 600px;
 }
+@media screen and (max-width: 769px) {
+  .references .slide-container .slide-image {
+    width: 100%;
+    height: auto;
+  }
+}
 .references .slide-container .slide-text {
   padding-left: 4rem;
+}
+@media screen and (max-width: 769px) {
+  .references .slide-container .slide-text {
+    padding: initial;
+  }
 }
 .references .slide-container .slide-names {
   margin-top: 4rem;
   font-size: 4rem;
+}
+@media screen and (max-width: 769px) {
+  .references .slide-container .slide-names {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+  }
 }
 .references .references-slider-arrows {
   position: absolute;
@@ -702,6 +739,12 @@ h4 {
   display: flex;
   align-items: center;
   color: #c18d6f;
+}
+@media screen and (max-width: 769px) {
+  .references .references-slider-arrows {
+    position: static;
+    justify-content: flex-end;
+  }
 }
 .references .references-slider-arrow {
   appearance: none;
