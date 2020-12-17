@@ -281,10 +281,10 @@ h4 {
 }
 .stories:after {
   content: "";
-  background: url(../img/line.svg) no-repeat center;
+  background: url(../img/line.svg) no-repeat center 100%;
   display: block;
   width: 100%;
-  height: 250px;
+  padding-bottom: 20%;
   position: absolute;
   pointer-events: none;
   bottom: -100px;
@@ -442,6 +442,8 @@ h4 {
   color: #fff;
   padding: 6rem 0 3rem;
   margin-top: 6rem;
+  position: relative;
+  background-image: url("../img/background-orange.jpg");
 }
 .main-footer p {
   margin-top: 0;
