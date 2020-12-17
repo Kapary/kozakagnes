@@ -254,18 +254,20 @@ h4 {
 .stories {
   padding: 50px 0;
   position: relative;
+  overflow: hidden;
 
-  &:after {
-    content: "";
-    background: url(../img/line.svg) no-repeat center 100%;
-    display: block;
-    width: 100%;
-    padding-bottom: 20%;
-    position: absolute;
-    pointer-events: none;
-    bottom: -100px;
-    background-size: cover;
-  }
+  // &:after {
+  //   content: "";
+  //   background: url(../img/line.svg) no-repeat center 100%;
+  //   display: block;
+  //   width: 100%;
+  //   padding-bottom: 20%;
+  //   position: absolute;
+  //   pointer-events: none;
+  //   bottom: -100px;
+  //   background-size: cover;
+  //   max-width: 100%;
+  // }
 
   @media screen and (max-width: 768px) {
     padding: 1rem;
@@ -408,9 +410,7 @@ h4 {
 
       a {
         width: 100%;
-        margin: initial !important;
-        img {
-        }
+        margin: 0 !important;
       }
     }
   }
@@ -745,7 +745,7 @@ h4 {
   }
 
   .tag-line {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
   }
 }

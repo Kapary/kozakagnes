@@ -44,9 +44,12 @@ window.onload = function () {
     mainMenu.addEventListener("click", function (e) {
       if (document.querySelector(".is-homepage")) {
         e.preventDefault();
-        document.querySelector(e.target.hash).scrollIntoView({
-          behavior: "smooth"
-        });
+
+        if (e.target && e.target.hash) {
+          document.querySelector(e.target.hash).scrollIntoView({
+            behavior: "smooth"
+          });
+        }
       }
     });
   });

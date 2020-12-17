@@ -278,17 +278,7 @@ h4 {
 .stories {
   padding: 50px 0;
   position: relative;
-}
-.stories:after {
-  content: "";
-  background: url(../img/line.svg) no-repeat center 100%;
-  display: block;
-  width: 100%;
-  padding-bottom: 20%;
-  position: absolute;
-  pointer-events: none;
-  bottom: -100px;
-  background-size: cover;
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   .stories {
@@ -403,7 +393,7 @@ h4 {
   }
   .stories .stories-list-item a {
     width: 100%;
-    margin: initial !important;
+    margin: 0 !important;
   }
 }
 .post-wrapper {
@@ -668,7 +658,7 @@ h4 {
     background-size: cover;
   }
   .tag-line {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
   }
 }
