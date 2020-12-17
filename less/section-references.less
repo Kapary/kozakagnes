@@ -1,0 +1,43 @@
+.references {
+  width: 80%;
+  margin: 0 auto;
+  //   .references-slider {
+  //   }
+
+  .slide-container {
+    display: flex;
+    align-items: center;
+
+    .slide-image {
+      width: 400px;
+      height: 600px;
+    }
+
+    .slide-text {
+      padding-left: 4rem;
+    }
+
+    .slide-names {
+      margin-top: 4rem;
+      font-size: 3rem;
+    }
+  }
+
+  .references-slider-arrows {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .references-slider-arrow {
+    appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+
+    + .references-slider-arrow {
+      margin-left: 2rem;
+    }
+  }
+}

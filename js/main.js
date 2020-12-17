@@ -47,4 +47,9 @@ window.onload = function () {
       }
     });
   });
+
+  // Slider with references
+  new Glide(".glide", {
+    animationDuration: 1000
+  }).mount();
 };
