@@ -2,6 +2,19 @@
 
 @headingColor: #da9c3a;
 
+/* font converted using font-converter.net. thank you! */
+@font-face {
+  font-family: "LaLuxesScript";
+
+  src: url("../fonts/SetSailStudios-LaLuxesScript.svg") format("svg"),
+    /* Legacy iOS */ url("../fonts/SetSailStudios-LaLuxesScript.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../fonts/SetSailStudios-LaLuxesScript.woff2")
+      format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *:before,
 *:after {
@@ -47,10 +60,11 @@ h1,
 h2,
 h3,
 h4 {
-  color: @headingColor;
-  font-family: "PT Serif", serif;
-  letter-spacing: 2px;
+  //color: @headingColor;
+  font-family: "LaLuxesScript", serif;
+  //letter-spacing: 2px;
   margin-top: 0;
+  font-weight: normal;
 }
 
 .main-section {
@@ -60,7 +74,7 @@ h4 {
 // HERO
 #hero {
   height: 100vh;
-  background-position: center 15%;
+  background-position: center bottom;
   background-size: cover;
   overflow: hidden;
 
@@ -163,7 +177,7 @@ h4 {
 }
 
 .tag-line {
-  font-size: 70px;
+  font-size: 8rem;
   margin-bottom: 20px;
 }
 
@@ -178,20 +192,22 @@ h4 {
     width: 370px;
     position: absolute;
     top: 50%;
-    left: 160px;
+    left: 21%;
     transform: translateY(-50%);
   }
 
   .img-wrapper {
     height: 100%;
-    width: 75%;
-    background-size: cover;
-    margin: auto 0 auto auto;
-    background-position: center bottom;
+    width: 50%;
+    background-size: contain;
+    margin: auto 10% auto auto;
+    background-position: center;
+    background-repeat: no-repeat;
 
     @media screen and (max-width: 767px) {
       width: 100%;
       padding: 30px;
+      margin: 0;
     }
   }
 }
@@ -538,7 +554,7 @@ h4 {
     width: 24px;
     height: 24px;
     color: #fff;
-    background: url(img/arrow-next-white.svg) no-repeat center;
+    background: url(../img/arrow-next-white.svg) no-repeat center;
     background-size: 16px auto;
     justify-content: center;
   }
@@ -549,7 +565,7 @@ h4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 100px;
-  background: url("./img/bg-camel.jpg") center;
+  background: url("../img/bg-camel.jpg") center;
   background-size: 720px 435px;
   padding: 100px;
   width: 90%;
