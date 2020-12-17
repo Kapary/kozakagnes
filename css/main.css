@@ -324,6 +324,7 @@ h4 {
 .stories .stories-list-item {
   position: relative;
   display: flex;
+  overflow-x: hidden;
 }
 .stories .stories-list-item .stories-list-item-link {
   transition: opacity 0.3s ease-in;
