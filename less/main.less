@@ -252,6 +252,18 @@ h4 {
 
 .stories {
   padding: 50px 0;
+  position: relative;
+
+  &:after {
+    content: "";
+    background: url(../img/line.svg) no-repeat center;
+    display: block;
+    width: 100%;
+    height: 290px;
+    position: absolute;
+    pointer-events: none;
+    bottom: -100px;
+  }
 
   @media screen and (max-width: 768px) {
     padding: 1rem;

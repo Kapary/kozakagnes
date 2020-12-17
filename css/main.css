@@ -276,6 +276,17 @@ h4 {
 }
 .stories {
   padding: 50px 0;
+  position: relative;
+}
+.stories:after {
+  content: "";
+  background: url(../img/line.svg) no-repeat center;
+  display: block;
+  width: 100%;
+  height: 290px;
+  position: absolute;
+  pointer-events: none;
+  bottom: -100px;
 }
 @media screen and (max-width: 768px) {
   .stories {
@@ -658,6 +669,15 @@ h4 {
 .references {
   width: 66%;
   margin: 0 auto;
+}
+.references .tag-line {
+  text-align: right;
+  margin-bottom: -50px;
+  z-index: 1;
+  position: relative;
+}
+.references .references-slider ul {
+  margin: 0;
 }
 .references .slide-container {
   display: flex;
