@@ -864,7 +864,6 @@ h4 {
   width: 1100px;
   max-width: calc(100% - 2rem);
   margin: 2rem auto;
-  padding-top: 4rem;
   padding-bottom: 4rem;
 }
 .story-page .story-main .story-heading {
@@ -879,6 +878,7 @@ h4 {
 }
 .story-page .story-main .story-content {
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 .story-page .story-main .story-content a {
   color: #c18d6f;
