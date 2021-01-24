@@ -57,16 +57,22 @@ window.onload = function () {
   var totalNumberWrapper = document.getElementById("slider-total-number");
   var currentIndexWrapper = document.getElementById("slider-current-index");
 
-  totalNumberWrapper.innerHTML = document.querySelectorAll(
-    ".slide-container"
-  ).length;
+  if (totalNumberWrapper) {
+    totalNumberWrapper.innerHTML = document.querySelectorAll(
+      ".slide-container"
+    ).length;
+  }
 
-  // Slider with references
-  var glide = new Glide(".glide", {
-    animationDuration: 1000
-  }).mount();
+  if (document.querySelector(".glide")) {
+    // Slider with references
+    var glide = new Glide(".glide", {
+      animationDuration: 1000
+    }).mount();
 
-  glide.on("run.after", function () {
-    currentIndexWrapper.innerHTML = glide.index + 1;
-  });
+    glide.on("run.after", function () {
+      if (currentIndexWrapper) {
+        currentIndexWrapper.innerHTML = glide.index + 1;
+      }
+    });
+  }
 };
