@@ -871,9 +871,11 @@ h4 {
   font-size: 8rem;
   text-align: center;
 }
-.story-page .story-main .story-heading .tag-line {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
+@media screen and (max-width: 767px) {
+  .story-page .story-main .story-heading {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
 }
 .story-page .story-main .story-content {
   margin-bottom: 2rem;
