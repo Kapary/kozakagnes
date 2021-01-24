@@ -409,7 +409,7 @@ h4 {
 }
 .stories .stories-list-item a h3 {
   position: absolute;
-  bottom: 25px;
+  bottom: 50px;
   left: 25px;
   max-width: 66%;
   font-size: 5rem;
@@ -875,6 +875,7 @@ h4 {
   margin-bottom: 2rem;
 }
 .story-page .story-main .story-content a {
+  color: #c18d6f;
   text-decoration: underline;
 }
 .story-page .story-main .story-content a:hover {
