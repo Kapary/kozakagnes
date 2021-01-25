@@ -142,16 +142,15 @@ h4 {
   transition: -webkit-transform 0.3s ease-in;
   transition: transform 0.3s ease-in;
   transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
+  right: -100%;
 }
 .mobile-menu-wrapper.visible {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
 }
 @media screen and (max-width: 767px) {
   .mobile-menu-wrapper {
